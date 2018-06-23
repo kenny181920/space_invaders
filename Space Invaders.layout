@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="diseno.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="550" topLine="0" />
+	</File>
 	<File name="disparos.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1026" topLine="0" />
+		<Cursor position="2494" topLine="40" />
 	</File>
 	<File name="disparos.h" open="1" top="0" tabpos="2">
-		<Cursor position="430" topLine="0" />
+		<Cursor position="832" topLine="0" />
 	</File>
 	<File name="inicia.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="229" topLine="0" />
 	</File>
 	<File name="inicia.h" open="1" top="0" tabpos="5">
-		<Cursor position="100" topLine="0" />
+		<Cursor position="56" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="104" topLine="0" />
+		<Cursor position="413" topLine="29" />
+	</File>
+	<File name="personajes.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="2764" topLine="63" />
+	</File>
+	<File name="personajes.h" open="1" top="0" tabpos="8">
+		<Cursor position="974" topLine="3" />
 	</File>
 </CodeBlocks_layout_file>

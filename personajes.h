@@ -31,5 +31,16 @@ void acomoda_enemigos(struct NAVE E[]);
 void pintar_enemigo(struct NAVE E[], BITMAP* buffer, int mov);
 void explosion1(struct NAVE E, BITMAP* buffer);
 void explosion2(struct NAVE N, BITMAP* buffer, BITMAP* fondo);
+void crear_bala_enemigo(struct NAVE E[], int &azar);
+void crear_bala_nave(struct NAVE& N, struct Balas disparos[]);
+
+struct escudo{
+    int x,y;
+    int dan;
+    int tipo;
+};
+
+void iniciar_escudo(struct escudo muros[]);
+void pintar_escudos(struct escudo ES[], BITMAP* img_mur, BITMAP* buffer);
 
 #endif // PERSONAJES_H_INCLUDED

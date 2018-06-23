@@ -91,3 +91,51 @@ void explosion2(struct NAVE N, BITMAP* buffer, BITMAP* fondo){
         }
     }
 }
+
+void crear_bala_enemigo(struct NAVE E[], int &azar){
+
+
+    if(E[azar].n_disp == 0){
+        azar = rand()%55;
+        while(E[azar].vida == 0){
+            azar = rand()%55;
+        }
+    }
+
+
+}
+
+void crear_bala_nave(struct NAVE& N, struct Balas disparos[]){
+    if(key[KEY_SPACE] and N.temporizador(5))
+        crear_bala(N.n_disp, N.max_disp, disparos, N.x, N.y, N.dir_bala);
+}
+
+void iniciar_escudo(struct escudo muros[]){
+    char pos_muros[3][22] = {
+        "AEC   AEC   AEC   AEC",
+        "B D   B D   B D   B D",
+    };
+    int r = 0;
+    for(int i=0; i<21; i++){
+        for(int j=0; j<2; j++){
+            if(pos_muros[j][i]!=' '){
+                muros[r].x = 90+i*20;
+                muros[r].y = 450+j*15;
+                muros[r].dan = 0;
+                if(pos_muros[j][i] == 'A') muros[r].tipo = 0;
+                if(pos_muros[j][i] == 'B') muros[r].tipo = 1;
+                if(pos_muros[j][i] == 'C') muros[r].tipo = 2;
+                if(pos_muros[j][i] == 'D') muros[r].tipo = 3;
+                if(pos_muros[j][i] == 'E') muros[r].tipo = 4;
+                r++;
+            }
+        }
+    }
+};
+
+void pintar_escudos(struct escudo ES[], BITMAP* img_mur, BITMAP* buffer){
+    for(int i=0; i<20; i++){
+        if(ES[i].dan!=3)
+            masked_blit(img_mur, buffer, ES[i].dan*20, ES[i].tipo*16, ES[i].x, ES[i].y, 20, 16);
+    }
+}

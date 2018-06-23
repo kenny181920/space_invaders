@@ -9,8 +9,30 @@
 #define ANCHO 600
 #define ALTO  600
 
+bool limites(struct NAVE E[], int &dir){
+    for(int i=0; i<55; i++){
+        if((E[i].x>520 or E[i].x<50) and E[i].vida != 0){
+            dir = -1*dir;
+            return true;
+        }
+    }
+    return false;
+}
 
+void mover_enemigos(struct NAVE E[], int &mov, int &dir){
+    for(int i=0; i<55; i++){
+        E[i].x += dir;
+    }
 
+    if(++mov == 2) mov = 0;
+
+    if(limites(E,dir)){
+        for(int j=0; j<55; j++){
+            E[j].y +=10;
+        }
+    }
+
+}
 
 int main(){
 
@@ -20,6 +42,7 @@ int main(){
     BITMAP *buffer = create_bitmap(ANCHO, ALTO);
     BITMAP *portada = load_bitmap("Recursos/portada.bmp",NULL);
     BITMAP *fondo = load_bitmap("Recursos/fondo.bmp",NULL);
+    BITMAP *img_muros = load_bitmap("Recursos/escudos.bmp",NULL);
 
     PORTADA(portada);
 
@@ -30,15 +53,25 @@ int main(){
     Balas disparos[N.max_disp];
     Balas disp_E[E[0].max_disp];
 
+    escudo ES[30];
+    iniciar_escudo(ES);
+
     int azar = rand()%55;
-    int mov = 0;
+    int mov = 0, dir = -5;
+    int vel_juego = 10;
 
     while(!key[KEY_ESC]){
         clear_to_color(buffer,0x000000);
+        pintar_escudos(ES, img_muros, buffer);
+
+        if(E[0].temporizador(vel_juego)){
+            mover_enemigos(E,mov,dir);
+        }
+
+
         N.pinta(buffer,0,0);
         N.mueve();
-        if(key[KEY_SPACE] and N.temporizador(5))
-        crear_bala(N.n_disp, N.max_disp, disparos, N.x, N.y, N.dir_bala);
+        crear_bala_nave(N,disparos);
         N.disparo(disparos, buffer);
 
         for(int i=0; i<55; i++){
@@ -46,14 +79,13 @@ int main(){
                 explosion1(E[i], buffer);
             }
         }
+        elimina_bala_escudo(N,ES,disparos);
 
         pintar_enemigo(E,buffer,mov);
-        if(E[azar].n_disp == 0) azar = rand()%55;
+        crear_bala_enemigo(E,azar);
         E[azar].disparo(disp_E, buffer);
-        if(E[0].temporizador(20))
-        if(++mov == 2) mov = 0;
-
         if(elimina_bala_objeto(E[azar], N, disp_E)) explosion2(N, buffer, fondo);
+        elimina_bala_escudo(E[azar],ES,disp_E);
 
         imprimir_fondo(fondo, buffer);
         blit(buffer, screen, 0, 0, 0, 0, ANCHO, ALTO);

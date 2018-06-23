@@ -67,7 +67,7 @@
 
 1527354694 c:\users\kenny\desktop\trabajos u\space invaders\inicia.h
 
-1527905107 source:c:\users\kenny\desktop\trabajos u\space invaders\main.cpp
+1529608250 source:c:\users\kenny\desktop\trabajos u\space invaders\main.cpp
 	<allegro.h>
 	<stdlib.h>
 	<time.h>
@@ -76,19 +76,19 @@
 	"personajes.h"
 	"diseno.h"
 
-1527904564 c:\users\kenny\desktop\trabajos u\space invaders\disparos.h
+1529605858 c:\users\kenny\desktop\trabajos u\space invaders\disparos.h
 	<allegro.h>
 	"personajes.h"
 
-1527904564 source:c:\users\kenny\desktop\trabajos u\space invaders\disparos.cpp
+1529605272 source:c:\users\kenny\desktop\trabajos u\space invaders\disparos.cpp
 	"disparos.h"
 	<allegro.h>
 
-1527904995 c:\users\kenny\desktop\trabajos u\space invaders\personajes.h
+1529607708 c:\users\kenny\desktop\trabajos u\space invaders\personajes.h
 	<allegro.h>
 	"diseno.h"
 
-1527904995 source:c:\users\kenny\desktop\trabajos u\space invaders\personajes.cpp
+1529607708 source:c:\users\kenny\desktop\trabajos u\space invaders\personajes.cpp
 	"personajes.h"
 	"disparos.h"
 	<allegro.h>
