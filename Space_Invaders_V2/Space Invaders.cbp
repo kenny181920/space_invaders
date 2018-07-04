@@ -38,6 +38,9 @@
 		<Unit filename="escenario.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="facade.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="personajes.h">
 			<Option target="&lt;{~None~}&gt;" />

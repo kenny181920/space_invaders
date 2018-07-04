@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 
+
 struct Balas{
     int x , y;
     int dx , dy;
@@ -16,18 +17,7 @@ bool colicion(int x1, int y1, int w1, int h1, int x2, int y2, int w2, int h2)
     return((x1<x2+w2) and (x2<x1+w1) and (y1<y2+h2) and (y2<y1+h1));
 }
 
-void crear_bala(int n_disparos, const int max_disparos ,struct Balas disparos[], const int X, const int Y , const int dy)
-{
-              if( n_disparos < max_disparos-1){
-                   n_disparos++;
 
-                   disparos[n_disparos].x  = X+11;
-                   disparos[n_disparos].y  = Y;
-                   disparos[n_disparos].dx = 0;
-                   disparos[n_disparos].dy = dy;
-               }
-
-}
 
 void pintar_bala(int n_disparos, const int max_disparos,struct Balas disparos[], BITMAP* buffer, BITMAP* bala, int ancho, int alto)
 {
@@ -42,27 +32,7 @@ void pintar_bala(int n_disparos, const int max_disparos,struct Balas disparos[],
 
 }
 
-void eliminar(struct Balas disparos[], int& n_disparos, int cont)
-{
-    Balas Btemp;
-    Btemp = disparos[cont];
-    disparos[cont] = disparos[n_disparos];
-    disparos[n_disparos] = Btemp;
-    n_disparos--;
-    if ( n_disparos < 0 ) n_disparos=0;
-}
 
-void elimina_bala(int n_disparos, const int max_disparos,struct Balas disparos[], const int ANCHO, const int ALTO)
-{
-      if ( n_disparos > 0 and n_disparos < max_disparos){
-            for ( int cont = 1; cont <= n_disparos; cont++){
-                      if ( disparos[cont].y > ALTO or disparos[cont].y < 0 or disparos[cont].x > ANCHO or disparos[cont].x < 0  )
-                       {
-                              eliminar(disparos, n_disparos, cont);
-                       }
-            }
-      }
-}
 
 
 /*

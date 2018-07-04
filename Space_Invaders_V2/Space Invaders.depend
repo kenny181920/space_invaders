@@ -49,7 +49,7 @@
 
 1341435802 c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\inicia.h
 
-1530117472 source:c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\main.cpp
+1530652453 source:c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\main.cpp
 	<allegro.h>
 	<time.h>
 	<iostream>
@@ -86,19 +86,19 @@
 	<string>
 	<iostream>
 
-1530116000 c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\personajes.h
+1530665409 c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\personajes.h
 	<allegro.h>
 	<vector>
 	"disparo.h"
 	<string>
 	<iostream>
 
-1530116157 c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\disparo.h
+1530731553 c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\disparo.h
 	<allegro.h>
 	"personajes.h"
 	<iostream>
 
-1530117419 c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\facade.h
+1530665619 c:\users\kenny\desktop\trabajos u\progra 4\space invaders oficial\facade.h
 	<allegro.h>
 	<time.h>
 	<iostream>
