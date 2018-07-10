@@ -117,10 +117,10 @@
 	"disparo.h"
 	<vector>
 
-1530061858 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\escenario.h
+1531263684 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\escenario.h
 	<allegro.h>
 
-1531251307 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\personajes.h
+1531266874 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\personajes.h
 	<allegro.h>
 	<vector>
 	"disparo.h"
@@ -128,11 +128,11 @@
 	<string>
 	<iostream>
 
-1531246228 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\disparo.h
+1531262693 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\disparo.h
 	<allegro.h>
 	<iostream>
 
-1531246253 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\facade.h
+1531266874 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\facade.h
 	"escenario.h"
 	"bridge.h"
 	"personajes.h"
@@ -141,6 +141,6 @@
 	<vector>
 	<iostream>
 
-1531251531 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\bridge.h
+1531263940 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\bridge.h
 	<allegro.h>
 

@@ -17,6 +17,7 @@ protected:
   Fondo()
   {
     masked_blit(fondo, buffer, 0, 0, 0, 0, 600, 600);
+
   }
 
   virtual ~Fondo()
