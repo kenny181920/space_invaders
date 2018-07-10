@@ -107,3 +107,40 @@
 	"disparo.h"
 	<vector>
 
+1530652453 source:c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\main.cpp
+	<allegro.h>
+	<time.h>
+	<iostream>
+	"escenario.h"
+	"personajes.h"
+	"facade.h"
+	"disparo.h"
+	<vector>
+
+1530061858 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\escenario.h
+	<allegro.h>
+
+1531251307 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\personajes.h
+	<allegro.h>
+	<vector>
+	"disparo.h"
+	"bridge.h"
+	<string>
+	<iostream>
+
+1531246228 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\disparo.h
+	<allegro.h>
+	<iostream>
+
+1531246253 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\facade.h
+	"escenario.h"
+	"bridge.h"
+	"personajes.h"
+	<allegro.h>
+	<time.h>
+	<vector>
+	<iostream>
+
+1531251531 c:\users\kenny\desktop\trabajos u\space invaders\space_invaders\space_invaders_v2\bridge.h
+	<allegro.h>
+

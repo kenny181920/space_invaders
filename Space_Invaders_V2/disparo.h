@@ -1,7 +1,6 @@
 #ifndef DISPARO_H_INCLUDED
 #define DISPARO_H_INCLUDED
 #include <allegro.h>
-#include "personajes.h"
 #include <iostream>
 using namespace std;
 

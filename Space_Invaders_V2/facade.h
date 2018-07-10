@@ -1,14 +1,18 @@
 #ifndef FACADE_H_INCLUDED
 #define FACADE_H_INCLUDED
-#include <allegro.h>
-#include <time.h>
+
 //#define ANCHO 600
 //#define ALTO  600
-#include <iostream>
+
 #include "escenario.h"
+
+//#include "disparo.h"
+#include "bridge.h"
 #include "personajes.h"
-#include "disparo.h"
+#include <allegro.h>
+#include <time.h>
 #include <vector>
+#include <iostream>
 using namespace std;
 
 void inicia_allegro(int ANCHO_ , int ALTO_){
@@ -36,7 +40,6 @@ void acomoda_enemigos(vector<Producto> &a){
             indice++;
             Producto aux = Producto(NaveFlyweight::getNave(2),140+j*30, 130+i*24,_tipo,1);
             a.push_back(aux);
-            //E[indice].inicia("Recursos/enemigos.bmp", "Recursos/Bala_enem.bmp", 6, 12, 25, 20, 140+j*30, 130+i*24, 8, _tipo, 1);
         }
     }
 }

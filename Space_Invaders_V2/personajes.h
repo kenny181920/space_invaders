@@ -5,9 +5,13 @@
 #include <allegro.h>
 #include <vector>
 #include "disparo.h"
+#include "bridge.h"
 #include <string>
 #include <iostream>
 using namespace std;
+
+class ImplementatorNave;
+class IDJuego;
 
 class Nave
 {
@@ -20,6 +24,7 @@ private:
     int ancho_p;
     int alto_p;
     int dir_bala;
+    void* image;
 
 public:
     int set_x()
@@ -67,7 +72,11 @@ public:
         return dir_bala;
     }
 
-    Nave(int _ancho_b, int _alto_b, int _ancho_p, int _alto_p, int _dir_bala)
+    void* set_imagen(){
+        return image;
+    }
+
+    Nave(int _ancho_b, int _alto_b, int _ancho_p, int _alto_p, int _dir_bala, char *dir_ar)
     {
         //max_disp = 2;
         ancho_b = _ancho_b;
@@ -75,6 +84,7 @@ public:
         ancho_p = _ancho_p;
         alto_p = _alto_p;
         dir_bala = _dir_bala;
+        image = IDJuego::INave->loadImg(dir_ar);
     }
     Nave(){};
 };
@@ -82,13 +92,13 @@ public:
 class Heroe:public Nave
 {
 public:
-    Heroe():Nave(6, 12, 30, 20, -8){}//3 vida
+    Heroe():Nave(6, 12, 30, 20, -8,"Recursos/nave.bmp"){}//3 vida
 };
 
 class Enemigo:public Nave
 {
 public:
-    Enemigo():Nave(6, 12, 25, 20, 8){}//1 vida
+    Enemigo():Nave(6, 12, 25, 20, 8,"Recursos/enemigos.bmp"){}//1 vida
 };
 
 class NaveFlyweight
@@ -253,6 +263,11 @@ public:
             return true;
         }
         return false;
+    }
+
+    void* set_imagen()
+    {
+        return m_model->set_imagen();
     }
 
 };
