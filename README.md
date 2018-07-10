@@ -14,3 +14,5 @@
 ![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/facade.png)
 #### - Flyweight: we will use it in the creation part of the ships, either enemies or the hero, this will save data from each one.
 ![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/Flyweight.png)
+### Final Version
+#### 
