@@ -27,7 +27,9 @@ These design patterns are all about Class and Object composition. Structural cla
 
 Bridge:
 Separates an object’s interface from its implementation,  to store all functions that use "Allegro" functions.
-
+![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/Blank%20Diagram%20(1).jpeg)
+or 
+![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/Blank%20Diagram.jpeg)
 Facade:
 A single class that represents an entire subsystem,to not have all the functions inside the main main.
 ![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/facade.png)
