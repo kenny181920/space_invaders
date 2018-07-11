@@ -15,4 +15,22 @@
 #### - Flyweight: we will use it in the creation part of the ships, either enemies or the hero, this will save data from each one.
 ![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/Flyweight.png)
 ### Final Version
-#### 
+#### In this Final Version we use diferent kinds of design patterns: Creational design patterns and Structural design patterns.
+#### - Creational design patterns:
+These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
+
+Singleton
+A class of which only a single instance can exist, this pattern will be used for the cover of the game since it will only be used once.
+![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/singleton.png)
+#### - Structural design patterns:  
+These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality.
+
+Bridge:
+Separates an object’s interface from its implementation,  to store all functions that use "Allegro" functions.
+
+Facade:
+A single class that represents an entire subsystem,to not have all the functions inside the main main.
+![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/facade.png)
+Flyweight:
+A fine-grained instance used for efficient sharing,  we will use it in the creation part of the ships, either enemies or the hero, this will save data from each one.
+![Version 1 UML](https://github.com/kenny181920/space_invaders/blob/master/Space_Invaders_V2/UML/Flyweight.png)
