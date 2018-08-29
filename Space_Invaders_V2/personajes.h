@@ -80,6 +80,10 @@ public:
         return image;
     }
 
+    void* set_buffer(){
+        return imageBuffer;
+    }
+
     Nave(int _ancho_b, int _alto_b, int _ancho_p, int _alto_p, int _dir_bala, char *dir_ar, char *dir_explo, int _xparche, int _yparche)
     {
         //max_disp = 2;
@@ -88,7 +92,7 @@ public:
         ancho_p = _ancho_p;
         alto_p = _alto_p;
         dir_bala = _dir_bala;
-        //image = IDJuego::INave->loadImg(dir_ar);
+        image = IDJuego::INave->loadImg(dir_ar);
         //imageBala = IDJuego::INave->loadImg("Recursos/Bala2.bmp");
         //imageBuffer = IDJuego::INave->createBit(600,600);
         //imageEXPL = IDJuego::INave->loadImg(dir_explo);
@@ -275,6 +279,11 @@ public:
     void* set_imagen()
     {
         return m_model->set_imagen();
+    }
+
+    void* set_buffer()
+    {
+        return m_model->set_buffer();
     }
 
 };

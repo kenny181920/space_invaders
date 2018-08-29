@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="bridge.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="disparo.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

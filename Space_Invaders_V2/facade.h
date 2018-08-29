@@ -30,12 +30,13 @@ void imprimir_fondo(BITMAP* fondo, BITMAP* buffer, IDJuego& id){
     id->IDibujar(fondo, buffer, 0, 0, 0, 0, 600, 600);
 }
 */
+
 void pinta(BITMAP* img_nav, BITMAP* buffer, int x, int y,int ix, int iy, int ancho_p, int alto_p){
     masked_blit(img_nav,buffer,ix*ancho_p,iy*alto_p,x,y,ancho_p, alto_p);
 }
 /*
-void pinta(BITMAP* img_nav, BITMAP* buffer, int x, int y,int ix, int iy, int ancho_p, int alto_p, IDJuego& id){
-    id->IDibujar(img_nav,buffer,ix*ancho_p,iy*alto_p,x,y,ancho_p, alto_p);
+void pinta23(IDJuego& id, void* img_nav, void* buffer, int x, int y,int ix, int iy, int ancho_p, int alto_p){
+    id.IDibujar(img_nav,buffer,ix*ancho_p,iy*alto_p,x,y,ancho_p, alto_p);
 }
 */
 void acomoda_enemigos(vector<Producto> &a){
@@ -52,7 +53,8 @@ void acomoda_enemigos(vector<Producto> &a){
     }
 }
 
-void pintar_enemigo(vector<Producto> &a, BITMAP* buffer, int mov){
+            //ij1->IDibujar(uno.set_imagen(), buffer,0*uno.set_ancho_p(),0*uno.set_alto_p(),uno.set_x(),uno.set_y(),uno.set_ancho_p(),uno.set_alto_p());
+void pintar_enemigo(vector<Producto> &a, BITMAP* buffer, int mov,IDJuego* id){
     BITMAP *img_enem = load_bitmap("Recursos/enemigos.bmp",NULL);
     int indice = -1;
     for(int i=0; i<5; i++){
@@ -60,7 +62,8 @@ void pintar_enemigo(vector<Producto> &a, BITMAP* buffer, int mov){
             indice++;
             if(a[indice].set_vida()>0)
             {
-               pinta(img_enem, buffer, a[indice].set_x(),a[indice].set_y(),mov,a[indice].set_tipo()-1,a[indice].set_ancho_p(),a[indice].set_alto_p());
+               //masked_blit(img_enem ,buffer,a[indice].set_ancho_p()*mov,a[indice].set_tipo()-1*a[indice].set_alto_p(),a[indice].set_x(),a[indice].set_y(),a[indice].set_ancho_p(),a[indice].set_alto_p());
+               pinta(img_enem ,buffer, a[indice].set_x(),a[indice].set_y(),mov,a[indice].set_tipo()-1,a[indice].set_ancho_p(),a[indice].set_alto_p());
             }
         }
     }
@@ -225,7 +228,7 @@ void crear_bala(Producto& a,int n_disparos, const int max_disparos ,struct Balas
             for(int j=1; j<=2; j++){
                 blit(parche, buffer, 0, 0, N.set_x(), N.set_y(), 30, 20);
                 masked_blit(load_bitmap("Recursos/nave.bmp",NULL), buffer, j*30, 0, N.set_x(), N.set_y(), 30, 20);
-                //masked_blit(fondo, buffer, 0, 0, 0, 0, 600, 600);
+                masked_blit(fondo, buffer, 0, 0, 0, 0, 600, 600);
                 blit(buffer, screen, 0, 0, 0, 0, 600, 600);
                 rest(50);
             }
@@ -289,7 +292,8 @@ public:
             clear_to_color(buffer,0x000000);
             pintar_escudos(ES, img_muros, buffer);
 
-            pinta(img_nav, buffer,uno.set_x(),uno.set_y(),0,0,uno.set_ancho_p(),uno.set_alto_p());
+            //pinta23(uno.set_imagen(), uno.set_buffer(),uno.set_x(),uno.set_y(),0,0,uno.set_ancho_p(),uno.set_alto_p(), ij1);
+            ij1->IDibujar(uno.set_imagen(), buffer,0*uno.set_ancho_p(),0*uno.set_alto_p(),uno.set_x(),uno.set_y(),uno.set_ancho_p(),uno.set_alto_p());
             uno.mueve();
 
             crear_bala_nave(uno,disparos);
@@ -306,7 +310,7 @@ public:
             if(E[0].temporizador(vel_juego)){
                 E[0].mover_enemigos(E,mov,dir);
             }
-            pintar_enemigo(E,buffer,mov);
+            pintar_enemigo(E,buffer,mov,ij1);
             crear_bala_enemigo(E,azar);
             disparo(E[azar],disp_E, buffer);
 
